@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/school-calendar-app',
+  // Vercelで公開する場合は basePath を空にする設定
+  basePath: process.env.VERCEL ? '' : '/school-calendar-app',
 };
 
 module.exports = nextConfig;
