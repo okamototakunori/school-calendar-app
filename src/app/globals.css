@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-secondary: var(--secondary);
+  --color-surface: var(--surface);
+  --color-on-surface: var(--on-surface);
+  --color-outline: var(--outline);
+}
+
+:root {
+  --background: #fef7ff;
+  --foreground: #1d1b20;
+  --primary: #6750a4;
+  --on-primary: #ffffff;
+  --secondary: #625b71;
+  --surface: #f7f2fa;
+  --on-surface: #1d1b20;
+  --outline: #79747e;
+}
+
+[data-theme='dark'] {
+  --background: #141218;
+  --foreground: #e6e1e5;
+  --primary: #d0bcff;
+  --on-primary: #381e72;
+  --secondary: #ccc2dc;
+  --surface: #1d1b20;
+  --on-surface: #e6e1e5;
+  --outline: #938f99;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+.md-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.md-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.md-button {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  transition: box-shadow 0.2s;
+}
+
+.md-button:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
